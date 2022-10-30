@@ -1,0 +1,74 @@
+
+running 2 tests
+test tests::test_regular ... ignored
+test tests::test_utf8 ... ignored
+
+test result: ok. 0 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+WARNING: HTML report generation will become a non-default optional feature in Criterion.rs 0.4.0.
+This feature is being moved to cargo-criterion (https://github.com/bheisler/cargo-criterion) and will be optional in a future version of Criterion.rs. To silence this warning, either switch to cargo-criterion or enable the 'html_reports' feature in your Cargo.toml.
+
+Gnuplot not found, using plotters backend
+Benchmarking normal 16/to_string
+Benchmarking normal 16/to_string: Warming up for 10.000 s
+Benchmarking normal 16/to_string: Collecting 1000 samples in estimated 15.005 s (188M iterations)
+Benchmarking normal 16/to_string: Analyzing
+normal 16/to_string     time:   [79.863 ns 80.327 ns 80.816 ns]
+                        change: [+8.4078% +9.1732% +9.9371%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 70 outliers among 1000 measurements (7.00%)
+  47 (4.70%) high mild
+  23 (2.30%) high severe
+Benchmarking normal 16/to_owned
+Benchmarking normal 16/to_owned: Warming up for 10.000 s
+Benchmarking normal 16/to_owned: Collecting 1000 samples in estimated 15.028 s (199M iterations)
+Benchmarking normal 16/to_owned: Analyzing
+normal 16/to_owned      time:   [74.641 ns 74.974 ns 75.323 ns]
+                        change: [+2.6447% +3.3971% +4.1456%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 27 outliers among 1000 measurements (2.70%)
+  17 (1.70%) high mild
+  10 (1.00%) high severe
+
+Benchmarking normal 4096/to_string
+Benchmarking normal 4096/to_string: Warming up for 10.000 s
+Benchmarking normal 4096/to_string: Collecting 1000 samples in estimated 15.006 s (123M iterations)
+Benchmarking normal 4096/to_string: Analyzing
+normal 4096/to_string   time:   [122.99 ns 123.66 ns 124.38 ns]
+                        change: [-10.761% -8.9235% -7.1894%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 63 outliers among 1000 measurements (6.30%)
+  32 (3.20%) high mild
+  31 (3.10%) high severe
+Benchmarking normal 4096/to_owned
+Benchmarking normal 4096/to_owned: Warming up for 10.000 s
+Benchmarking normal 4096/to_owned: Collecting 1000 samples in estimated 15.058 s (123M iterations)
+Benchmarking normal 4096/to_owned: Analyzing
+normal 4096/to_owned    time:   [128.82 ns 131.43 ns 134.24 ns]
+                        change: [-2.0894% -0.6010% +0.8963%] (p = 0.45 > 0.05)
+                        No change in performance detected.
+Found 86 outliers among 1000 measurements (8.60%)
+  51 (5.10%) high mild
+  35 (3.50%) high severe
+
+Benchmarking utf8 4096/to_string
+Benchmarking utf8 4096/to_string: Warming up for 10.000 s
+Benchmarking utf8 4096/to_string: Collecting 2000 samples in estimated 45.189 s (362M iterations)
+Benchmarking utf8 4096/to_string: Analyzing
+utf8 4096/to_string     time:   [121.27 ns 122.34 ns 123.57 ns]
+                        change: [-6.0897% -5.1850% -4.3040%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 82 outliers among 2000 measurements (4.10%)
+  46 (2.30%) high mild
+  36 (1.80%) high severe
+Benchmarking utf8 4096/to_owned
+Benchmarking utf8 4096/to_owned: Warming up for 10.000 s
+Benchmarking utf8 4096/to_owned: Collecting 2000 samples in estimated 45.131 s (354M iterations)
+Benchmarking utf8 4096/to_owned: Analyzing
+utf8 4096/to_owned      time:   [118.30 ns 119.03 ns 119.78 ns]
+                        change: [-4.8533% -4.1319% -3.4400%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 86 outliers among 2000 measurements (4.30%)
+  62 (3.10%) high mild
+  24 (1.20%) high severe
+
