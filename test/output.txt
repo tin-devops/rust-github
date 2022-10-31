@@ -1,0 +1,9 @@
+test BenchFib10 ... bench:         137 ns/iter (+/- 5)
+
+test BenchFib20 ... bench:       20465 ns/iter (+/- 952)
+
+test Fibonacci/Recursive/20 ... bench:       20524 ns/iter (+/- 1161)
+test Fibonacci/Iterative/20 ... bench:           5 ns/iter (+/- 0)
+test Fibonacci/Recursive/21 ... bench:       30594 ns/iter (+/- 5193)
+test Fibonacci/Iterative/21 ... bench:           5 ns/iter (+/- 0)
+
