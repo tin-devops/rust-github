@@ -20,10 +20,7 @@ jobs:
         run: echo ${{ github.run_number }}
       - name: Output Run Attempt
         run: echo ${{ github.run_attempt }}
-
-      
-      - name: ${{github.event.inputs.id}}
-        run: echo run identifier ${{ inputs.id }}
+      - run: echo https://github.com/tin-devops/rust-github/actions/runs/${{ github.run_id }}
       - uses: actions/upload-artifact@v3
         with:
           name: my-artifact
