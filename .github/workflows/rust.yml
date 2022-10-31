@@ -24,6 +24,16 @@ jobs:
         with:
           name: my-artifact
           path: test
+
+      - name: Get Current Job Log URL
+        uses: Tiryoh/gha-jobid-action@v0
+        id: jobs
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          job_name: ${{ github.job }}
+
+      - name: Output Current Job Log URL
+        run: echo ${{ steps.jobs.outputs.html_url }}
       # - run: rustup toolchain update nightly && rustup default nightly
       # - name: Run benchmark
       #   run: cargo +nightly bench | tee output.txt
